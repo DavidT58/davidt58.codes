@@ -57,6 +57,9 @@ app.post('/url', async (req, res, next) => {
         const created = await urls.insert(newUrl);
         res.json(created);
     } catch (error){
+        if(error.message.startsWith('E11000')){
+            error.message = 'Slug in use.'
+        }
         next(error);
     }
 });
