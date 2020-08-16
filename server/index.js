@@ -66,6 +66,9 @@ app.post('/url', async (req, res, next) => {
         const created = await urls.insert(newUrl);
         res.json(created);
     } catch (error){
+        if(error.message.startsWith("E")){
+            error.message = 'Slug in useee';
+        }
         next(error);
     }
 });
