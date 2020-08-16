@@ -5,12 +5,13 @@ const helmet = require('helmet');
 const yup = require('yup');
 const monk = require('monk');
 const { nanoid } = require('nanoid');
+const { default: strictTransportSecurity } = require('helmet/dist/middlewares/strict-transport-security');
 
 require('dotenv').config();
 
 const db = monk('localhost:27017/myurlshort');
 const urls = db.get('urls');
-urls.createIndex('name');
+urls.createIndex({ slug: 1 }, { unique: true });
 
 const app = express();
 
@@ -24,8 +25,16 @@ app.get('/url/:id', (req, res) => {
     //TODO: get a short url by id
 });
 
-app.get('/:id', (req, res) => {
-    //TODO: redirect to url
+app.get('/:id', async (req, res) => {
+    const { id: slug } = req.params;
+    try{
+        const url = await urls.findOne({ slug });
+        if(url){
+            res.redirect(url.url);
+        }
+    } catch (error){
+
+    }
 });
 
 const schema = yup.object().shape({
