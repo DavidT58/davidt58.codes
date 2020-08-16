@@ -10,7 +10,7 @@ require('dotenv').config();
 
 const db = monk('localhost:27017/myurlshort');
 const urls = db.get('urls');
-urls.createIndex('name');
+urls.createIndex({ name: 1 }, { unique: true });
 
 const app = express();
 
