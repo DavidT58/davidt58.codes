@@ -10,5 +10,17 @@
     <header>
         <h1>myurlshortener - shorten your urls</h1>
     </header>
+    <main id="app">
+        <form @submit.prevent="createURL()">
+            <label for="url">URL</label>
+            <input v-model="url" name="url" id="url">
+            <label for="url">SLUG</label>
+            <input v-model="slug" name="slug" id="slug">
+            <button type="submit">CREATE</button>
+        </form>
+        <pre>
+            {{JSON.stringify(created, null, 2)}}
+        </pre>
+    </main>
 </body>
 </html>
