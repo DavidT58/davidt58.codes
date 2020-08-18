@@ -4,7 +4,7 @@ This main purpose of this website is to test and deploy various web technologies
 
 ## General information
 
-This [website](davidt58.codes) is currently deployed on digital ocean, on a single Ubuntu 18 droplet.
+This [website](https://davidt58.codes) is currently deployed on digital ocean, on a single Ubuntu 18 droplet.
 
 Currently, I am testing an URL shortener implemented in NodeJS + Express, along with a MongoDB database for storing shortened URL's.
 
