@@ -22,7 +22,7 @@ npm run dev
 
 POST and GET are implemented, so simply if you type davidt58.codes/helloworld (GET method) in your web browser it will lead you to helloworld.rs
 
-Similarly, if you make a POST query with a custom slug, it will be in the database and you could access it;
+Similarly, if you make a POST (using Insomnia or a similar tool) query with a custom slug, it will be in the database and you could access it;
 
 JSON format for the POST query: 
 {
