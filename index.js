@@ -5,7 +5,7 @@ const helmet = require('helmet');
 const yup = require('yup');
 const monk = require('monk');
 const { nanoid } = require('nanoid');
-const { default: strictTransportSecurity } = require('helmet/dist/middlewares/strict-transport-security');
+//const { default: strictTransportSecurity } = require('helmet/dist/middlewares/strict-transport-security');
 
 require('dotenv').config();
 
