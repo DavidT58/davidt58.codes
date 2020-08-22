@@ -4,7 +4,7 @@ This main purpose of this website is to test and deploy various web technologies
 
 ## General information
 
-This [website](https://davidt58.codes) is currently deployed on digital ocean, on a single Ubuntu 18 droplet.
+This [website](https://davidt58.codes) is currently deployed on an Azure Linux Ubuntu 18.04 VM
 
 Currently, I am testing an URL shortener implemented in NodeJS + Express, along with a MongoDB database for storing shortened URL's.
 
@@ -15,7 +15,7 @@ The front-end needs more work, but the back-end works as exprected;
 Alternatively, you can clone this repo and run the website locally with the following commands:
 
 ```bash
-cd davidt58.codes/server
+cd davidt58.codes/
 npm install
 npm run dev
 ```
