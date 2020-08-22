@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charser="UTF-8">
-    <meta name="viewport" content="width=device-width, initial">
-    <title>myurlshortener</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My URL Shortener</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>myurlshortener - shorten your urls</h1>
-    </header>
-    <main id="app">
-        <form @submit.prevent="createURL()">
-            <label for="url">URL</label>
-            <input v-model="url" name="url" id="url">
-            <label for="url">SLUG</label>
-            <input v-model="slug" name="slug" id="slug">
-            <button type="submit">CREATE</button>
-        </form>
-        <pre>
-            {{JSON.stringify(created, null, 2)}}
-        </pre>
-    </main>
+  <header>
+    
+  </header>
+  <main id="app">
+    <form class="form" v-if="formVisible" @submit.prevent="createUrl()">
+      <input class="input" type="text" v-model="url" name="url" id="url" placeholder="enter a url">
+      <input class="input" type="text" v-model="slug" name="slug" id="slug" placeholder="enter a slug">
+      <button type="submit" class="create">create</button>
+    </form>
+    <div v-if="created">
+      <p class="created">Your short url is: <a :href="created">{{created}}</a></p>
+    </div>
+  </main>
+  <script src="vue.min.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
