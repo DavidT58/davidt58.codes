@@ -11,7 +11,7 @@
     
   </header>
   <main id="app">
-    <form class="form" v-if="formVisible" @submit.prevent="createUrl()">
+    <form class="form" v-on:submit.prevent>
       <input class="input" type="text" v-model="url" name="url" id="url" placeholder="enter a url">
       <input class="input" type="text" v-model="slug" name="slug" id="slug" placeholder="enter a slug">
       <button type="submit" class="create">create</button>
