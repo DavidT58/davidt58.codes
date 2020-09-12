@@ -8,7 +8,7 @@ This [website](https://davidt58.codes) is currently deployed on an Azure Linux U
 
 Currently, I am testing an URL shortener implemented in NodeJS + Express, along with a MongoDB database for storing shortened URL's.
 
-The front-end needs more work, but the back-end works as exprected;
+The front-end needs more work, but the back-end works as expected;
 
 ## Usage
 
