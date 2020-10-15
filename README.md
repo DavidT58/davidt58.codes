@@ -1,6 +1,6 @@
 # My experimental website
 
-This main purpose of this website is to test and deploy various web technologies - basically a playground.
+The main purpose of this website is to test and deploy various web technologies - basically a playground.
 
 ## General information
 
