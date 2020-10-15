@@ -15,6 +15,7 @@ The front-end needs more work, but the back-end works as expected;
 Alternatively, you can clone this repo and run the website locally with the following commands:
 
 ```bash
+git clone https://github.com/DavidT58/davidt58.codes.git
 cd davidt58.codes/
 npm install
 npm run dev
